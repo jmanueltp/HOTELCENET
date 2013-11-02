@@ -6,9 +6,9 @@ $(function (){
 			var nom = $('#regNom').val();
 			var mail = $('#regEmail').val();
 			var tel = $('#regTel').val();
-			
-			if(nom != '' && mail !='' && tel != ''){
-				enviarDatos(nom, mail, tel);	
+			var foto= $('#regFoto').attr('foto');
+			if(nom != '' && mail !='' && tel != '' && foto!='' && foto!=undefined){
+				enviarDatos(nom, mail, tel, foto);	
 			}else{
 				navigator.notification.alert('Todos los campos son requeridos',null,'Datos de Registo','Error','Aceptar');
 			}
